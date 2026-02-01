@@ -1,0 +1,32 @@
+clean:
+    go clean
+
+b:
+    go build ./...
+
+r:
+    go run .
+
+t:
+    go test ./...
+
+fmt:
+    gofmt -w .
+
+fmt-check:
+    gofmt -l . | grep . && exit 1 || exit 0
+
+lint:
+    golangci-lint run
+
+loc:
+    find . -name "*.go" | xargs wc -l
+
+tidy:
+    go mod tidy
+
+vet:
+    go vet ./...
+
+help:
+    @just --list
