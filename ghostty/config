@@ -1,0 +1,70 @@
+# Font
+font-family = JetBrains Mono
+font-style = Regular
+font-style-bold = Bold
+font-style-italic = Italic
+font-size = 14
+
+# Window
+window-padding-x = 20
+window-padding-y = 10
+window-decoration = true
+
+# Background
+background = 0a0a0a
+background-opacity = 0.85
+
+foreground = c8c8d0
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = false
+cursor-color = 7aa2f7
+
+# Colors
+# Black
+palette = 0=#1a1b26
+palette = 8=#444b6a
+# Red
+palette = 1=#f7768e
+palette = 9=#ff7a93
+# Green
+palette = 2=#9ece6a
+palette = 10=#b9f27c
+# Yellow
+palette = 3=#e0af68
+palette = 11=#ff9e64
+# Blue
+palette = 4=#7aa2f7
+palette = 12=#7da6ff
+# Magenta
+palette = 5=#bb9af7
+palette = 13=#c0a6ff
+# Cyan
+palette = 6=#7dcfff
+palette = 14=#a9d6ff
+# White
+palette = 7=#a9b1d6
+palette = 15=#c0caf5
+
+# Selection
+selection-background = 28293d
+selection-foreground = c0caf5
+
+# Keybinds
+keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
+keybind = ctrl+shift+d=new_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_tab
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+
+# Misc
+copy-on-select = clipboard
+mouse-hide-while-typing = true
+confirm-close-surface = false
