@@ -10,7 +10,6 @@ ninja
 openssl
 curl
 wget
-just
 go
 zig
 bun
