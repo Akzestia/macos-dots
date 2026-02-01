@@ -1,0 +1,16 @@
+start NAME *ARGS:
+    nohup {{NAME}} {{ARGS}} > /tmp/{{NAME}}.log 2>&1 & echo $! > /tmp/{{NAME}}.pid
+    @echo "{{NAME}} started (pid: $(cat /tmp/{{NAME}}.pid))"
+
+stop NAME:
+    @kill $(cat /tmp/{{NAME}}.pid) 2>/dev/null && rm /tmp/{{NAME}}.pid && echo "{{NAME}} stopped" || echo "{{NAME}} not running"
+
+restart NAME:
+    just stop {{NAME}}
+    just start {{NAME}}
+
+status NAME:
+    @kill -0 $(cat /tmp/{{NAME}}.pid) 2>/dev/null && echo "{{NAME}} is running (pid: $(cat /tmp/{{NAME}}.pid))" || echo "{{NAME}} not running"
+
+logs NAME:
+    tail -f /tmp/{{NAME}}.log
