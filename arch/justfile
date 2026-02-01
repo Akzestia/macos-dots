@@ -1,0 +1,10 @@
+arch-install:
+    #!/usr/bin/env bash
+    if ! command -v yay &>/dev/null; then
+        sudo pacman -S --needed git base-devel
+        git clone https://aur.archlinux.org/yay.git /tmp/yay
+        cd /tmp/yay && makepkg -si --noconfirm
+        rm -rf /tmp/yay
+    fi
+    sudo pacman -S --needed - < pacman/packages.txt
+    yay -S --needed - < pacman/aur.txt
