@@ -1,4 +1,6 @@
 brew "git"
+brew "yabai"
+brew "skhd"
 brew "docker"
 brew "cmake"
 brew "ninja"
