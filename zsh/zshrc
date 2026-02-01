@@ -22,6 +22,17 @@ source $ZSH/oh-my-zsh.sh
 # Bin exports
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Just files xD
+export cpp="$HOME/macos-dots/just/c++/justfile"
+export rs="$HOME/macos-dots/just/rust/justfile"
+export go_j="$HOME/macos-dots/just/go/justfile"
+export zig_j="$HOME/macos-dots/just/zig/justfile"
+export solid="$HOME/macos-dots/just/solid/justfile"
+
+export sh="$HOME/macos-dots/shell/justfile"
+export mac="$HOME/macos-dots/macos/justfile"
+
 # Aliases
 alias j='just'
+alias jf='just -f'
 alias n='nvim'
