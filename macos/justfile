@@ -1,0 +1,19 @@
+dock-hide:
+    defaults write com.apple.dock autohide -bool true && killall Dock
+
+dock-show:
+    defaults write com.apple.dock autohide -bool false && killall Dock
+
+menubar-hide:
+    defaults write NSGlobalDomain _HIHideMenuBar -bool true && killall SystemUIServer
+
+menubar-show:
+    defaults write NSGlobalDomain _HIHideMenuBar -bool false && killall SystemUIServer
+
+minimal:
+    defaults write com.apple.dock autohide -bool true && killall Dock
+    defaults write NSGlobalDomain _HIHideMenuBar -bool true && killall SystemUIServer
+
+default:
+    defaults write com.apple.dock autohide -bool false && killall Dock
+    defaults write NSGlobalDomain _HIHideMenuBar -bool false && killall SystemUIServer
