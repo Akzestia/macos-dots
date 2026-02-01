@@ -1,0 +1,51 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {},
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore",
+      "ctrl-a": "editor::MoveToBeginningOfLine",
+      "ctrl-e": "editor::MoveToEndOfLine",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "s s": "file_finder::Toggle",
+      "s g": "workspace::NewSearch",
+      "s r": "project_symbols::Toggle",
+      "s p": "projects::OpenRecent",
+
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+
+      "f f": "editor::ToggleFold",
+
+      "g r": "editor::FindAllReferences",
+      "g i": "editor::GoToImplementation",
+      "g t": "editor::GoToTypeDefinition",
+      "K": "editor::Hover",
+      "space c a": "editor::ToggleCodeActions",
+      "space r n": "editor::Rename",
+
+      "space j": "pane::GoBack",
+      "space k": "pane::GoForward",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-§": "terminal_panel::Toggle",
+
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    },
+  },
+]
