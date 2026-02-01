@@ -1,0 +1,38 @@
+init NAME:
+    bunx degit solidjs/templates/ts {{NAME}}
+
+i:
+    bun install
+
+dev:
+    bun run dev
+
+b:
+    bun run build
+
+preview:
+    bun run start
+
+clean:
+    rm -rf node_modules dist .parcel-cache
+
+fmt:
+    bunx prettier --write "src/**/*.{ts,tsx,css}"
+
+fmt-check:
+    bunx prettier --check "src/**/*.{ts,tsx,css}"
+
+lint:
+    bunx eslint src
+
+loc:
+    find src -name "*.ts" -o -name "*.tsx" | xargs wc -l
+
+add PACKAGE:
+    bun add {{PACKAGE}}
+
+add-dev PACKAGE:
+    bun add -d {{PACKAGE}}
+
+help:
+    @just --list
