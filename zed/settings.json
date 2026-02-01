@@ -55,7 +55,7 @@
     },
   },
   "terminal": {
-    "font_family": "Maple Mono NF",
+    "font_family": "Noto Sans Syriac",
     "env": {
       "EDITOR": "zed --wait",
     },
