@@ -1,0 +1,38 @@
+clean:
+    cargo clean
+
+b:
+    cargo build
+
+br:
+    cargo build --release
+
+r:
+    cargo run
+
+rr:
+    cargo run --release
+
+t:
+    cargo test
+
+fmt:
+    cargo fmt
+
+fmt-check:
+    cargo fmt --check
+
+lint:
+    cargo clippy -- -D warnings
+
+loc:
+    find src -name "*.rs" | xargs wc -l
+
+new NAME:
+    cargo new {{NAME}}
+
+new-lib NAME:
+    cargo new --lib {{NAME}}
+
+help:
+    @just --list
